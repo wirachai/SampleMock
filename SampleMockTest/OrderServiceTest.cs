@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
+using SampleMock.Interfaces;
 using SampleMock.Models;
 using SampleMock.Repositories;
 using SampleMock.Services;
@@ -17,24 +19,23 @@ namespace SampleMockTest
         public void Create_ShouldSave_WhenValidValidation()
         {
             // arrange
-            Validator_Stub stubValidator = new Validator_Stub();
-            stubValidator.IsValid = true;
+            var stubValidator = new Mock<IValidator>();
+            stubValidator.Setup(x => x.IsValid).Returns(true);
 
-            OrderRepository_Mock mockRepository = new OrderRepository_Mock();
+            var mockRepository = new Mock<IOrderRepository>();
 
             OrderService service = new OrderService();
-            service.CreateValidator = stubValidator;
-            service.OrderRepository = mockRepository;
+            service.CreateValidator = stubValidator.Object;
+            service.OrderRepository = mockRepository.Object;
 
             // act
             List<OrderItemModel> testData = new List<OrderItemModel>();
             testData.Add(new OrderItemModel() { ItemId = "ITM0001", Quantity = 1 });
 
             service.Create(testData);
-            bool result = mockRepository.IsSaved;
 
             // assert
-            Assert.AreEqual(true, result);
+            mockRepository.Verify(x => x.Add(testData), Times.Once);
         }
     }
 }
