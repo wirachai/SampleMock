@@ -3,15 +3,12 @@ using SampleMock.Models;
 using SampleMock.Repositories;
 using SampleMock.Services;
 using SampleMock.Validators;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace SampleMockTest
+namespace SampleMock.Test
 {
     [TestFixture]
-    class OrderServiceTest
+    internal class OrderServiceTest
     {
         [Test]
         public void Create_ShouldSave_WhenValidValidation()

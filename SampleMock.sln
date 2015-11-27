@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMock", "SampleMock\SampleMock.csproj", "{D16A5C6E-BC11-42A9-9B71-50C1D3A9291C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMockTest", "SampleMockTest\SampleMockTest.csproj", "{06FD294E-CFC3-4E49-A93C-F86F808573DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMock.Test", "SampleMockTest\SampleMock.Test.csproj", "{06FD294E-CFC3-4E49-A93C-F86F808573DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
