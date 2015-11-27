@@ -1,10 +1,6 @@
 ﻿using SampleMock.Interfaces;
 using SampleMock.Models;
-using SampleMock.Validators;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace SampleMock.Services
 {

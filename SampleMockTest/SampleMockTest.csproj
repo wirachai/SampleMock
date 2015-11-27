@@ -7,8 +7,8 @@
     <ProjectGuid>{06FD294E-CFC3-4E49-A93C-F86F808573DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SampleMockTest</RootNamespace>
-    <AssemblyName>SampleMockTest</AssemblyName>
+    <RootNamespace>SampleMock.Test</RootNamespace>
+    <AssemblyName>SampleMock.Test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
